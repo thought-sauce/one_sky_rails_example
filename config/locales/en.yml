@@ -18,3 +18,8 @@ en:
 
   content:
     home: "Try changing the Language."
+    
+    sidebar:
+      current_locale: "Current Locale"
+      default_locale: "Default Locale"
+      

@@ -13,8 +13,8 @@
         <h3><%= link_to t("title.home"), "/" %></h3>
         <ul class="nav">
           <li><%= link_to t("link.english"), "/?locale=en"  %></li>
-          <li><%= link_to t("link.french"),  "/?locale=fr"  %></li>
-          <li><%= link_to t("link.chinese"), "/?locale=zh"  %></li>
+          <li><%= link_to t("link.french"),  "/?locale=fr_FR"  %></li>
+          <li><%= link_to t("link.chinese"), "/?locale=zh_CN"  %></li>
         </ul>
       </div>
     </div>
@@ -29,8 +29,8 @@
         <div class="span4">
           <h3><%=t "heading.sidebar.debug" %></h3>
           <ul>
-            <li>Current Locale: <%= I18n.locale %></li>
-            <li>Default Locale: <%= I18n.default_locale %></li>
+            <li><%=t "content.sidebar.current_locale" %>: <%= I18n.locale %></li>
+            <li><%=t "content.sidebar.default_locale" %>: <%= I18n.default_locale %></li>
           </ul>
         </div>
       </div>
