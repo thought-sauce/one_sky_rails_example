@@ -117,3 +117,15 @@ For our example we want to enable the following languages;
 2. Chinese (Simplified)
 
 For each of these we're going to set the "Solo" package.
+
+We're going to Translate our strings for each language using Google Translate.
+
+So we go back to the language list and select "Chinese (Simplified)" and click "Translate Now"
+
+![One Sky Translate Now](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-translate-now.png)
+
+We're then going to choose "Machine" translation, select "Google Translate" and click "Translate immediately".
+
+![One Sky Translate Now](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-google-translate.png)
+
+Then go and do the same for "French".
