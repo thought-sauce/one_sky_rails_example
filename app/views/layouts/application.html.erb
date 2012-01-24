@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= I18n.t("title.home") %></title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="padding-top: 60px">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="container">
+        <h3><%= link_to t("title.home"), "/" %></h3>
+        <ul class="nav">
+          <li><%= link_to t("link.english"), "/?locale=en"  %></li>
+          <li><%= link_to t("link.french"),  "/?locale=fr"  %></li>
+          <li><%= link_to t("link.chinese"), "/?locale=zh"  %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div class="span11">
+          <%= yield %>
+        </div>
+        <div class="span1">&nbsp;</div>
+        <div class="span4">
+          <h3><%=t "heading.sidebar.debug" %></h3>
+          <ul>
+            <li>Current Locale: <%= I18n.locale %></li>
+            <li>Default Locale: <%= I18n.default_locale %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
