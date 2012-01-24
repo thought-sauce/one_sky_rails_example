@@ -95,6 +95,21 @@ With One Sky setup correctly this should just be a matter of running the rake ta
 
     rake one_sky:upload
 
-Back on the One Sky Platform you should be able to see all of your strings uploaded (in this case there are 7)
+Back on the One Sky Platform you should be able to see all of your strings uploaded (in this case there are 9)
 
 https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-all-strings.png
+
+== 5. Using the Platform to provide translations
+
+We have to do two things;
+
+1. Enable extra languages.
+2. Add the translations.
+
+To enable extra languages, go back to the One Sky Platform, click on the application, and click on the "languages" button.
+
+For our example we want to enable the following languages;
+
+1. French
+
+2. Chinese (Simplified)
