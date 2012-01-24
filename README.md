@@ -108,8 +108,12 @@ We have to do two things;
 
 To enable extra languages, go back to the One Sky Platform, click on the application, and click on the "languages" button.
 
+![One Sky Enable Languages](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-enable-languages.png)
+
 For our example we want to enable the following languages;
 
 1. French
 
 2. Chinese (Simplified)
+
+For each of these we're going to set the "Solo" package.
