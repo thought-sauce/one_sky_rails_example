@@ -21,11 +21,11 @@ We'll begin from a simple app, with a single page, in 3 languages, and cover;
 
 Signing up to the One Sky Platform is a simple process.
 
-1. Go to {One Sky homepage}[http://oneskyapp.com]
+1. Go to [One Sky homepage](http://oneskyapp.com)
 
-https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-homepage.png
+![One Sky Home Page](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-homepage.png)
 
-2. Click on {Begin Free Trial}[http://oneskyapp.com/sign-up]
+2. Click on [Begin Free Trial](http://oneskyapp.com/sign-up)
 
 3. You'll be required to enter the usual details, plus you will need to choose a subdomain for the app to run at.
 (for the means of this tutorial we'll say you chose the domain myname.oneskyapp.com)
@@ -34,7 +34,7 @@ https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-
 
 5. Back on One Sky's Platform, it'll ask you to "Create New Project"
 
-https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-new-project.png
+![One Sky New Project](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-new-project.png)
 
 6. We're going to create a project named "example_app", with the base language "English (US)", and with a single platform "Website"
 
@@ -63,7 +63,7 @@ For this we need four pieces of information;
 For the API Keys go to the One Sky Platform, click on "Account & Settings", then click on "API Key"
 It will display a "Public Key" and a "Secret Key".
 
-[https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-api-keys.png]
+![One Sky API Keys](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-api-keys.png)
 
 In this case the "Public Key" is "publicpublicpublicpublicpublic"
 and the "Secret Key" is "secretsecretsecretsecretsecret"
@@ -72,7 +72,7 @@ The Project Name in our example is "example_app"
 
 The Platform ID is shown on the One Sky Platform, just look where it says "Website (#123)".
 
-[https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-platform-id.png]
+![One Sky Platform ID](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-platform-id.png)
 
 In this case the "Platform ID" is 123.
 
@@ -97,7 +97,7 @@ With One Sky setup correctly this should just be a matter of running the rake ta
 
 Back on the One Sky Platform you should be able to see all of your strings uploaded (in this case there are 9)
 
-https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-all-strings.png
+![One Sky All Strings](https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-all-strings.png)
 
 ## 5. Using the Platform to provide translations
 
