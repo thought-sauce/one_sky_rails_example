@@ -1,4 +1,4 @@
-== One Sky Rails Example
+# One Sky Rails Example
 
 This example is intended to introduce you to how to integrate your Ruby on Rails web application with the
 One Sky translation service.
@@ -17,7 +17,7 @@ We'll begin from a simple app, with a single page, in 3 languages, and cover;
 
 6. Downloading the translations.
 
-== 1. Signing up to the One Sky Platform
+## 1. Signing up to the One Sky Platform
 
 Signing up to the One Sky Platform is a simple process.
 
@@ -40,7 +40,7 @@ https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-
 
 7. We're done for now!
 
-== 2. Installing the Gem
+## 2. Installing the Gem
 
 Simply open up the Gemfile and add in the line
 
@@ -48,7 +48,7 @@ Simply open up the Gemfile and add in the line
 	
 Do a quick `bundle install` and everything should be ready.
 
-== 3. Creating the One Sky configuration file
+## 3. Creating the One Sky configuration file
 
 For this we need four pieces of information;
 
@@ -63,7 +63,7 @@ For this we need four pieces of information;
 For the API Keys go to the One Sky Platform, click on "Account & Settings", then click on "API Key"
 It will display a "Public Key" and a "Secret Key".
 
-https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-api-keys.png
+[https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-api-keys.png]
 
 In this case the "Public Key" is "publicpublicpublicpublicpublic"
 and the "Secret Key" is "secretsecretsecretsecretsecret"
@@ -72,7 +72,7 @@ The Project Name in our example is "example_app"
 
 The Platform ID is shown on the One Sky Platform, just look where it says "Website (#123)".
 
-https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-platform-id.png
+[https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-platform-id.png]
 
 In this case the "Platform ID" is 123.
 
@@ -89,7 +89,7 @@ The contents should look like
     project: example_app
     platform_id: 123
     
-== 4. Uploading your English strings
+## 4. Uploading your English strings
 
 With One Sky setup correctly this should just be a matter of running the rake task.
 
@@ -99,7 +99,7 @@ Back on the One Sky Platform you should be able to see all of your strings uploa
 
 https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-all-strings.png
 
-== 5. Using the Platform to provide translations
+## 5. Using the Platform to provide translations
 
 We have to do two things;
 
