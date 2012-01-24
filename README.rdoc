@@ -9,11 +9,13 @@ We'll begin from a simple app, with a single page, in 3 languages, and cover;
 
 2. Installing the Gem
 
-3. Creating the OneSky configuration file
+3. Creating the One Sky configuration file
 
 4. Uploading your english strings.
 
-5. Downloading the translations.
+5. Using the Platform to provide translations.
+
+6. Downloading the translations.
 
 == 1. Signing up to the One Sky Platform
 
@@ -24,6 +26,59 @@ Signing up to the One Sky Platform is a simple process.
 2. Click on {Begin Free Trial}[http://oneskyapp.com/sign-up]
 
 3. You'll be required to enter the usual details, plus you will need to choose a subdomain for the app to run at.
+(for the means of this tutorial we'll say you chose the domain myname.oneskyapp.com)
 
-Ongoing for the means of this tutorial we'll say you chose the domain myapp.oneskyapp.com
+4. You'll receive an activation email, follow back to activate, and then set up your project.
 
+5. Back on One Sky's Platform, it'll ask you to "Create New Project"
+
+6. We're going to create a project named "example_app", with the base language "English (US)", and with a single platform "Website"
+
+7. We're done for now!
+
+== 2. Installing the Gem
+
+Simply open up the Gemfile and add in the line
+
+    gem 'i18n-one_sky'
+	
+Do a quick `bundle install` and everything should be ready.
+
+== 3. Creating the One Sky configuration file
+
+For this we need four pieces of information;
+
+1. The API Public Key
+
+2. The API Secret Key
+
+3. The Project Name
+
+4. The Platform ID
+
+For the API Keys go to the One Sky Platform, click on "Account & Settings", then click on "API Key"
+It will display a "Public Key" and a "Secret Key".
+
+The Project Name in our example is "example_app"
+
+The Platform ID is shown on the One Sky Platform, just look where it says "Website (#123)".
+In this case the "Platform ID" is 123.
+
+We run the rails generate command with the arguments as follows
+
+    rails generate one_sky:init publicpublicpublicpublicpublic secretsecretsecretsecretsecret example_app 123
+	
+You should now see a file in the config directory named "one_sky.yml".
+
+The contents should look like
+
+    api_key: publicpublicpublicpublicpublic
+    api_secret: secretsecretsecretsecretsecret
+    project: example_app
+    platform_id: 123
+    
+== 4. Uploading your English strings
+
+With One Sky setup correctly this should just be a matter of running the rake task.
+
+    rake one_sky:upload
