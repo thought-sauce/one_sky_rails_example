@@ -32,6 +32,8 @@ Signing up to the One Sky Platform is a simple process.
 
 5. Back on One Sky's Platform, it'll ask you to "Create New Project"
 
+{new project}[https://github.com/thought-sauce/one_sky_rails_example/raw/master/readme/onesky-new-project.png]
+
 6. We're going to create a project named "example_app", with the base language "English (US)", and with a single platform "Website"
 
 7. We're done for now!
