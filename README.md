@@ -17,6 +17,10 @@ We'll begin from a simple app, with a single page, in 3 languages, and cover;
 
 6. Downloading the translations.
 
+7. Improving Translations
+
+8. Deploying to Heroku
+
 ## 1. Signing up to the One Sky Platform
 
 Signing up to the One Sky Platform is a simple process.
@@ -198,3 +202,48 @@ We come back to the application, and do the same again;
     rake one_sky:download
 
 Now the translations will be updated.
+
+## 8. Deploying to Heroku
+
+Deploying to Heroku is easy!
+
+Simply open up the Gemfile and add in the line
+
+    gem 'heroku'
+
+Then run a quick `bundle install`
+
+After this the heroku deployment is just
+
+    heroku create --stack cedar
+    git push heroku master
+
+This is fine, but Heroku doesn't allow us to change the file system, so we need to change the way we load translations.
+
+Luckily we have a Rails generator to handle the tricky stuff for us
+
+    rails generate one_sky:init_active_record_backend
+    
+Running this will create a migration, and an initializer, that will allow us to use the database to store translations.
+
+Lets get the latest code onto Heroku
+
+    git add .
+    git commit -m "added active record backend"
+    git push heroku master
+    
+We will need to run the migration on Heroku too
+
+    heroku run rake db:migrate
+    
+And we're ready.
+
+Now all we need to update translations is
+
+    # run the special active record download task
+    heroku run rake one_sky:active_record:download
+    
+    # restarting is crucial to refresh the I18n cache
+    heroku restart 
+
+
