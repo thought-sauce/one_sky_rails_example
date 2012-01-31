@@ -1,10 +1,18 @@
 source 'https://rubygems.org'
 
+# rails
 gem 'rails', '3.2.0'
 
-gem 'sqlite3'
+# sqlite in dev
+gem 'sqlite3', :group => [:development, :test]
 
+# postgres on heroku
+gem 'pg', :group => :production
 
+# jquery
+gem 'jquery-rails'
+
+# twitter bootstrap
 gem 'twitter-bootstrap-rails'
 
 # Gems used only for assets and not required
@@ -19,4 +27,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# use OneSky's translation services
+# gem "i18n-one_sky"
+
+# deploy to heroku
+# gem "heroku"
